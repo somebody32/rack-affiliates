@@ -12,7 +12,7 @@ module Rack
     def initialize(app, opts = {})
       @app = app
       @param = opts[:param] || "ref"
-      @cookie_ttl = opts[:ttl] || 60*60*24*30  # 30 days
+      @cookie_ttl = opts[:ttl] || 60*60  # 1 hour
       @cookie_domain = opts[:domain] || nil
     end
 
